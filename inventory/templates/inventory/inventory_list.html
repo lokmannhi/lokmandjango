@@ -1,0 +1,9 @@
+<h1>Inventory List Page</h1>
+{% for inventory in inventories %}
+<p>
+  <a href="{% url 'inventory-detail' inventory.id %}">{{ inventory.name }}</a>
+</p>
+<p>Supplier: {{ inventory.supplier.name }}</p>
+<p>Availability: {{ inventory.availability }}</p>
+<hr />
+{% endfor %}

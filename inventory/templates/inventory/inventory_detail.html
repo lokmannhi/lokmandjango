@@ -1,0 +1,11 @@
+<h1>Inventory Detail Page</h1>
+
+{% if not_found %}
+<p style="color: red">404 - Inventory item not found</p>
+{% else %}
+<h2>{{ item.name }}</h2>
+<p>{{ item.description }}</p>
+<p>Note: {{ item.note }}</p>
+<p>Stock: {{ item.stock }}</p>
+<p>Supplier: {{ item.supplier.name }}</p>
+{% endif %}
